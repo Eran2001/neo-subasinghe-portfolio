@@ -1,14 +1,14 @@
-import * as React from "react"
-import { cn } from "@/src/lib/utils"
+import * as React from "react";
+import { cn } from "@/src/lib/utils";
 
-const SectionHeading = ({ 
-  title, 
-  subtitle, 
+const SectionHeading = ({
+  title,
+  subtitle,
   centered = false,
-  className 
-}: { 
-  title: string; 
-  subtitle?: string; 
+  className,
+}: {
+  title: string;
+  subtitle?: string;
   centered?: boolean;
   className?: string;
 }) => (
@@ -18,17 +18,25 @@ const SectionHeading = ({
         {subtitle}
       </span>
     )}
-    <h2 className="text-3xl md:text-4xl font-bold text-dark dark:text-white tracking-tight">
+    <h2 className="text-3xl md:text-4xl font-bold dark:text-dark tracking-tight">
       {title}
     </h2>
   </div>
 );
 
-const BadgePill = ({ children, className }: { children: React.ReactNode; className?: string }) => (
-  <span className={cn(
-    "px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider",
-    className
-  )}>
+const BadgePill = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => (
+  <span
+    className={cn(
+      "px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider",
+      className,
+    )}
+  >
     {children}
   </span>
 );
