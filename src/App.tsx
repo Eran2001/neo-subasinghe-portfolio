@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { AppRoutes } from "./routes";
+import { AppRoutes } from "./routes/routes";
 import { useUIStore } from "./stores/stores";
 
 export default function App() {

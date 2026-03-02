@@ -51,7 +51,13 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto h-20 flex items-center justify-between">
         <Link to="/">
           <img
-            src={isHome && !isScrolled ? MainLogo : MainLogoLight}
+            src={
+              isHome && !isScrolled
+                ? MainLogo
+                : themeMode === "dark"
+                  ? MainLogo
+                  : MainLogoLight
+            }
             alt="Lumina"
             className="h-20 object-contain"
           />
